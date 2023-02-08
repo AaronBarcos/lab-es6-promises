@@ -42,10 +42,20 @@ getInstruction('mashedPotatoes', 0, (step0) => {
           document.querySelector("#mashedPotatoes").innerHTML += `<li>Mashed potatoes are ready!</li>`
           let img = document.querySelector("#mashedPotatoesImg");
           img.style.display = "block"
+        }, (error)=>{
+          console.log(error)
         });
+      }, (error)=>{
+        console.log(error)
       });
+    }, (error)=>{
+      console.log(error)
     });
+  }, (error)=>{
+    console.log(error)
   });
+},(error)=>{
+  console.log(error)
 });
 
 
@@ -83,6 +93,9 @@ obtainInstruction('steak', 0)
     document.querySelector("#steak").innerHTML += `<li>Stake is ready!</li>`
     document.querySelector("#steakImg").style.display = "block"
   })
+  .catch((error)=>{
+    console.log(error)
+  })
   
 
 // Iteration 3 using async/await
@@ -106,19 +119,9 @@ async function makeBroccoli() {
     document.querySelector("#broccoli").innerHTML += `<li>Broccoli is ready!</li>`;
     document.querySelector("#broccoliImg").style.display = "block"
 
-
-
-
-
-
-
   } catch (error){
-
+    console.log(error)
   }
-    
-    
-
-
 }
 
 makeBroccoli()
@@ -146,7 +149,9 @@ Promise.all([
   document.querySelector("#brusselsSprouts").innerHTML += `<li>Brussels sprouts are ready!</li>`;
   document.querySelector("#brusselsSproutsImg").style.display = "block"
 })
-.catch((error) => {})
+.catch((error) => {
+  console.log(error)
+})
 
 
 
